@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de roupas</title>
+</head>
+<body style="margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #1e293b;">
+
+    <!-- CABEÇALHO / ROTAS -->
+    <header style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            
+            <!-- LOGO COM ÍCONE -->
+            <div style="font-size: 20px; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 8px; letter-spacing: -0.5px;">
+                <span style="font-size: 24px;">🛍️</span> VESTE.ME
+            </div>
+            
+            <!-- ROTAS DE NAVEGAÇÃO -->
+            <nav style="display: flex; gap: 20px; align-items: center;">
+                <a href="/" style="text-decoration: none; color: #2563eb; font-weight: 600; font-size: 14px; border-bottom: 2px solid #2563eb; padding-bottom: 4px;">🛒 Compras</a>
+                <a href="/produtos" style="text-decoration: none; color: #64748b; font-weight: 500; font-size: 14px; transition: color 0.2s;">👕 Produtos</a>
+                <a href="/carrinho" style="text-decoration: none; color: #64748b; font-weight: 500; font-size: 14px; display: flex; align-items: center; gap: 4px;">
+                    💼 Carrinho <span style="background-color: #f1f5f9; color: #0f172a; font-size: 11px; padding: 2px 6px; border-radius: 10px; font-weight: 700;">0</span>
+                </a>
+                <a href="/perfil" style="text-decoration: none; color: #64748b; font-weight: 500; font-size: 14px;">👤 Minha Conta</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        
+        <!-- BANNER DE BOAS-VINDAS (HERO) -->
+        <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-radius: 20px; padding: 60px 40px; text-align: center; color: #ffffff; margin-bottom: 50px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);">
+            <div style="font-size: 40px; margin-bottom: 15px;">✨</div>
+            <h3 style="font-size: 32px; font-weight: 800; margin: 0 0 12px 0; letter-spacing: -0.5px;">Pagina compras</h3>
+            <p style="font-size: 16px; color: #94a3b8; margin: 0 0 28px 0; max-width: 500px; margin-left: auto; margin-right: auto;">Bem vindo(a) à nossa loja! Explore os lançamentos da temporada com frete grátis.</p>
+            <a href="/produtos" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 32px; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 15px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);">
+                Explorar Coleção 🔥
+            </a>
+        </div>
+
+        <!-- SEÇÃO DE PRODUTOS VITRINE (COM ESPAÇOS RESERVADOS) -->
+        <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 25px; display: flex; align-items: center; gap: 8px;">
+            ⭐ Destaques da Semana
+        </h4>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 50px;">
+            
+            <!-- CARD DE PRODUTO 1 (RESERVADO) -->
+            <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
+                <!-- Espaço reservado para Imagem -->
+                <div style="width: 100%; height: 280px; background-color: #f1f5f9; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8; margin-bottom: 16px; border: 2px dashed #cbd5e1;">
+                    <span style="font-size: 32px; margin-bottom: 8px;">👕</span>
+                    <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.5px;">[ ESPAÇO DA IMAGEM ]</span>
+                </div>
+                <div style="font-size: 13px; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Casual</div>
+                <h5 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; color: #0f172a;">Camiseta Minimalista Premium</h5>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #0f172a;">R$ 89,90</span>
+                    <button style="background-color: #0f172a; color: white; border: none; padding: 8px 12px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 13px;">+ Adicionar</button>
+                </div>
+            </div>
+
+            <!-- CARD DE PRODUTO 2 (RESERVADO) -->
+            <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
+                <!-- Espaço reservado para Imagem -->
+                <div style="width: 100%; height: 280px; background-color: #f1f5f9; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8; margin-bottom: 16px; border: 2px dashed #cbd5e1;">
+                    <span style="font-size: 32px; margin-bottom: 8px;">🧥</span>
+                    <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.5px;">[ ESPAÇO DA IMAGEM ]</span>
+                </div>
+                <div style="font-size: 13px; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Inverno</div>
+                <h5 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; color: #0f172a;">Casaco de Lã Contemporâneo</h5>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #0f172a;">R$ 249,90</span>
+                    <button style="background-color: #0f172a; color: white; border: none; padding: 8px 12px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 13px;">+ Adicionar</button>
+                </div>
+            </div>
+
+            <!-- CARD DE PRODUTO 3 (RESERVADO) -->
+            <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
+                <!-- Espaço reservado para Imagem -->
+                <div style="width: 100%; height: 280px; background-color: #f1f5f9; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8; margin-bottom: 16px; border: 2px dashed #cbd5e1;">
+                    <span style="font-size: 32px; margin-bottom: 8px;">👟</span>
+                    <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.5px;">[ ESPAÇO DA IMAGEM ]</span>
+                </div>
+                <div style="font-size: 13px; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Calçados</div>
+                <h5 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; color: #0f172a;">Tênis Urbano Sport Confort</h5>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #0f172a;">R$ 189,90</span>
+                    <button style="background-color: #0f172a; color: white; border: none; padding: 8px 12px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 13px;">+ Adicionar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
