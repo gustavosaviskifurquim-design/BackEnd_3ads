@@ -7,6 +7,12 @@ const porta = 3000
     res.send(olá, abacaxi)
     })
 
+    app.get('/', (req, res) => {
+    res.send('/paginas/index.html', {root:import.meta.dirname})
+    })
+
     //liberar a porta do meu computador 
-    app.listen(porta, () => {console.log('servidor está vivo')})
+    app.listen(porta, () => {console.log('servidor está vivo')
+    })
+    
     
