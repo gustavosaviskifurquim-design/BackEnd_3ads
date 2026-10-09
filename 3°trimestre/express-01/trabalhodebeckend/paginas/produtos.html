@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportX - Equipamentos de Elite</title>
+    <style>
+        /* Importando a mesma fonte robusta e veloz */
+        @import url('https://googleapis.com');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Padronização Estrita da Paleta de Cores Esportiva */
+        :root {
+            --bg-principal: #0B0C10;     /* Preto Carbono */
+            --bg-secundario: #1F2833;    /* Grafite Escuro */
+            --verde-neon: #00FF66;       /* Verde Destaque Principal */
+            --verde-hover: #00CC52;      /* Verde Tom Escuro para Hover */
+            --texto-claro: #FFFFFF;      /* Branco Puro */
+            --texto-cinza: #C5C6C7;      /* Cinza de apoio */
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-claro);
+            padding-top: 100px; /* Espaço para o menu fixo */
+        }
+
+        /* Menu Superior Identificado */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: rgba(11, 12, 16, 0.95);
+            border-bottom: 2px solid var(--bg-secundario);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--verde-neon);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--texto-cinza);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verde-neon);
+        }
+
+        .btn-header {
+            background: transparent;
+            border: 2px solid var(--verde-neon);
+            color: var(--verde-neon);
+            padding: 8px 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-header:hover {
+            background: var(--verde-neon);
+            color: var(--bg-principal);
+            box-shadow: 0 0 15px var(--verde-neon);
+        }
+
+        /* Container Principal do Catálogo */
+        .catalog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Cabeçalho da Categoria */
+        .category-section {
+            margin-bottom: 70px;
+        }
+
+        .category-title {
+            font-size: 28px;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            border-left: 5px solid var(--verde-neon);
+            padding-left: 15px;
+        }
+
+        .category-title span {
+            color: var(--verde-neon);
+        }
+
+        /* Grid de Produtos Dinâmico */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card de Produto Esportivo */
+        .product-card {
+            background-color: var(--bg-secundario);
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 255, 102, 0.15);
+        }
+
+        /* Badge de Destaque */
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--verde-neon);
+            color: var(--bg-principal);
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-style: italic;
+            border-radius: 3px;
+            z-index: 10;
+        }
+
+        /* Área da Imagem */
+        .image-box {
+            width: 100%;
+            height: 280px;
+            background-color: #ffffff; /* Fundo branco para destacar as silhuetas isoladas */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Detalhes do Produto */
+        .product-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-brand {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--verde-neon);
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            height: 42px; /* Fixa altura para manter alinhamento */
+            overflow: hidden;
+        }
+
+        .price-box {
+            margin-top: auto;
+            margin-bottom: 15px;
+        }
+
+        .price-tag {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--texto-claro);
+            font-style: italic;
+        }
+
+        /* Botão Adicionar ao Carrinho */
+        .btn-add-cart {
+            width: 100%;
+            background: transparent;
+            border: 2px solid var(--verde-neon);
+            color: var(--verde-neon);
+            padding: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-add-cart:hover {
+            background-color: var(--verde-neon);
+            color: var(--bg-principal);
+            box-shadow: 0 5px 15px rgba(0, 255, 102, 0.4);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-links, .btn-header {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Consistente -->
+    <header>
+        <div class="logo">SPORT<span>X</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Treinos</a></li>
+            <li><a href="#">Equipamentos</a></li>
+            <li><a href="#">Comunidade</a></li>
+        </ul>
+        <button class="btn-header">Área do Atleta</button>
+    </header>
+
+    <div class="catalog-container">
+
+        <!-- CATEGORIA 01: CALÇADOS DE ALTA PERFORMANCE -->
+        <section class="category-section">
+            <h2 class="category-title">Calçados de <span>Performance</span></h2>
+            <div class="products-grid">
+                
+                <!-- Produto 1: Nike Air Max Plus -->
+                <div class="product-card">
+                    <span class="badge">Mais Vendido</span>
+                    <div class="image-box">
+                        <img src="image_0hqr0L.png" alt="Nike Air Max Plus Black">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <div class="product-name">Nike Air Max Plus Tn All Black</div>
+                        <div class="price-box">
+                            <div class="price-tag">R$ 1.199,90</div>
+                        </div>
+                        <button class="btn-add-cart">Comprar Equipamento</button>
+                    </div>
+                </div>
+
+                <!-- Produto 2: Nike Revolution 8 -->
+                <div class="product-card">
+                    <div class="image-box">
+                        <img src="image_RRUZAR.png" alt="Nike Revolution 8">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <div class="product-name">Nike Revolution 8 Speed</div>
+                        <div class="price-box">
+                            <div class="price-tag">R$ 449,90</div>
+                        </div>
+                        <button class="btn-add-cart">Comprar Equipamento</button>
+                    </div>
+                </div>
+
+                <!-- Produto 3: Adidas Hellbender -->
+                <div class="product-card">
+                    <div class="image-box">
+                        <img src="image_OjDZKu.png" alt="Adidas Hellbender">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <div class="product-name">Tênis Adidas Hellbender Outdoor</div>
+                        <div class="price-box">
+                            <div class="price-tag">R$ 599,90</div>
+                        </div>
+                        <button class="btn-add-cart">Comprar Equipamento</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CATEGORIA 02: VESTUÁRIO E SQUAD SELECTIONS -->
+        <section class="category-section">
+            <h2 class="category-title">Vestuário e <span>Aparatos</span></h2>
+            <div class="products-grid">

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportX - Alta Performance</title>
+    <style>
+        /* Importando uma fonte robusta e moderna */
+        @import url('https://googleapis.com');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Paleta de Cores Esportiva */
+        :root {
+            --bg-principal: #0B0C10;     /* Preto Carbono */
+            --bg-secundario: #1F2833;    /* Grafite Escuro */
+            --verde-neon: #00FF66;       /* Verde Destaque Principal */
+            --verde-hover: #00CC52;      /* Verde com tom mais escuro para efeitos */
+            --texto-claro: #FFFFFF;      /* Branco Puro */
+            --texto-cinza: #C5C6C7;      /* Cinza de apoio */
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-claro);
+            overflow-x: hidden;
+        }
+
+        /* Cabeçalho / Menu */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: rgba(11, 12, 16, 0.95);
+            border-bottom: 2px solid var(--bg-secundario);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            font-style: italic;
+            color: var(--texto-claro);
+        }
+
+        .logo span {
+            color: var(--verde-neon);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--texto-cinza);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verde-neon);
+        }
+
+        .btn-header {
+            background: transparent;
+            border: 2px solid var(--verde-neon);
+            color: var(--verde-neon);
+            padding: 8px 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-header:hover {
+            background: var(--verde-neon);
+            color: var(--bg-principal);
+            box-shadow: 0 0 15px var(--verde-neon);
+        }
+
+        /* Seção Principal (Hero) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            margin-top: 60px;
+            background: linear-gradient(135px, rgba(11,12,16,1) 60%, rgba(0,255,102,0.15) 100%);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--verde-neon);
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+        }
+
+        .hero-content p {
+            color: var(--texto-cinza);
+            font-size: 18px;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        /* Botão Esportivo de Ação */
+        .btn-cta {
+            background-color: var(--verde-neon);
+            color: var(--bg-principal);
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-style: italic;
+            transition: 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 255, 102, 0.4);
+        }
+
+        .btn-cta:hover {
+            background-color: var(--verde-hover);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 255, 102, 0.6);
+        }
+
+        /* Seção de Grid / Categorias Esportivas */
+        .features {
+            padding: 100px 8%;
+            background-color: var(--bg-secundario);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        .section-title span {
+            color: var(--verde-neon);
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-principal);
+            padding: 40px 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--verde-neon);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--texto-cinza);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            .nav-links, .btn-header {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Superior -->
+    <header>
+        <div class="logo">SPORT<span>X</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Treinos</a></li>
+            <li><a href="#">Equipamentos</a></li>
+            <li><a href="#">Comunidade</a></li>
+        </ul>
+        <button class="btn-header">Área do Atleta</button>
+    </header>
+
+    <!-- Banner Principal (Hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Supere seus <span>Limites</span> a cada Segundo</h1>
+            <p>Acelere sua evolução com a plataforma desenvolvida para quem respira performance. Acesse treinos exclusivos, acompanhe suas metas e junte-se ao time.</p>
+            <button class="btn-cta">Começar Jornada</button>
+        </div>
+    </section>
+
+    <!-- Seção de Destaques / Categorias -->
+    <section class="features">
+        <h2 class="section-title">Nossos <span>Pilares</span></h2>
+        
+        <div class="grid-cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <h3>01. Foco Total</h3>
+                <p>Planos customizados de acordo com seu ritmo para que sua mente e corpo andem sempre em sincronia de evolução.</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="card">
+                <h3>02. Equipamentos</h3>
+                <p>Análises e recomendações dos melhores aparatos esportivos do mercado para otimizar seus resultados com segurança.</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="card">
+                <h3>03. Comunidade</h3>
+                <p>Conecte-se com atletas do mesmo nível, compartilhe estatísticas, desafios semanais e suba no ranking geral.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
