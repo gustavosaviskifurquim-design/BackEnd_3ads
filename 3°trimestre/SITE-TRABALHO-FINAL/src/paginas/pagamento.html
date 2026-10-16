@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportX - Checkout de Alta Performance</title>
+    <!-- Vinculando o arquivo CSS separado -->
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <div class="checkout-container">
+        <!-- Coluna da Esquerda: Resumo -->
+        <aside class="order-summary">
+            <h2>Seu <span>Plano</span></h2>
+            <div class="item-row">
+                <div class="item-info">
+                    <h4>Plano Black Evolution</h4>
+                    <p>Acesso total à arena + Personal Trainer incluso</p>
+                </div>
+                <div class="item-price">R$ 149,90</div>
+            </div>
+            <div class="total-box">
+                <span>Total</span>
+                <span class="total-price">R$ 149,90</span>
+            </div>
+        </aside>
+
+        <!-- Coluna da Direita: Pagamento -->
+        <main class="payment-form-box">
+            <h3>Forma de Pagamento</h3>
+            <div class="payment-methods">
+                <button type="button" class="method-btn active">Cartão de Crédito</button>
+                <button type="button" class="method-btn">Pix</button>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="card-number">Número do Cartão</label>
+                    <input type="text" id="card-number" placeholder="0000 0000 0000 0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Nome Impresso no Cartão</label>
+                    <input type="text" id="card-name" placeholder="NOME DO ATLETA" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Validade</label>
+                        <input type="text" id="expiry" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="000" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-pay">Ativar Minha Matrícula</button>
+            </form>
+        </main>
+    </div>
+
+    <!-- TELA DE AGRADECIMENTO (MODAL PUSH) -->
+    <div class="modal-overlay">
+        <div class="thanks-card">
+            <div class="thanks-icon">&checkmark;</div>
+            <h2>Inscrição <span>Confirmada</span></h2>
+            <p>Seja bem-vindo à elite, atleta! Suas credenciais de acesso foram enviadas diretamente para o seu e-mail cadastrado.</p>
+        </div>
+    </div>
+
+</body>
+</html>

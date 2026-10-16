@@ -1,0 +1,191 @@
+/* Importando a fonte Poppins corretamente do Google Fonts */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Paleta de Cores Esportiva */
+:root {
+    --bg-principal: #0B0C10;     /* Preto Carbono */
+    --bg-secundario: #1F2833;    /* Grafite Escuro/Container */
+    --verde-neon: #00FF66;       /* Verde Destaque Principal */
+    --verde-hover: #00CC52;      /* Verde Tom Escuro para Hover */
+    --texto-claro: #FFFFFF;      /* Branco Puro */
+    --texto-cinza: #C5C6C7;      /* Cinza de apoio */
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-claro);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135px, rgba(11,12,16,1) 50%, rgba(0,255,102,0.08) 100%);
+}
+
+/* Container de Login */
+.login-container {
+    background-color: var(--bg-secundario);
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--verde-neon);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+/* Botão para voltar à Home */
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--texto-cinza);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    color: var(--verde-neon);
+}
+
+/* Cabeçalho do Card */
+.login-header {
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--texto-claro);
+    margin-bottom: 5px;
+}
+
+.logo span {
+    color: var(--verde-neon);
+}
+
+.login-header p {
+    color: var(--texto-cinza);
+    font-size: 14px;
+}
+
+/* Estrutura do Formulário */
+.form-group {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    color: var(--texto-claro);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    background-color: var(--bg-principal);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    padding: 14px 16px;
+    color: var(--texto-claro);
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Efeito de foco esportivo nos inputs */
+.form-group input:focus {
+    outline: none;
+    border-color: var(--verde-neon);
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+}
+
+/* Links Úteis (Esqueceu a senha / Lembrar-me) */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--texto-cinza);
+}
+
+.remember-me input {
+    accent-color: var(--verde-neon);
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--texto-cinza);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-password:hover {
+    color: var(--verde-neon);
+}
+
+/* Botão de Entrar (Esportivo) */
+.btn-login {
+    width: 100%;
+    background-color: var(--verde-neon);
+    color: var(--bg-principal);
+    border: none;
+    border-radius: 4px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 255, 102, 0.3);
+}
+
+.btn-login:hover {
+    background-color: var(--verde-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 102, 0.5);
+}
+
+/* Rodapé de Cadastro */
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--texto-cinza);
+}
+
+.login-footer a {
+    color: var(--verde-neon);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

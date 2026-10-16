@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportX - Alta Performance</title>
+    <!-- Vinculando a folha de estilo unificada -->
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+<body>
+
+    <!-- Menu Superior Fluido -->
+    <header>
+        <div class="logo">SPORT<span>X</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/produtos">Equipamentos</a></li>
+                <li><a href="/sobre">Nossa História</a></li>
+                <li><a href="/planos">Assinaturas</a></li>
+            </ul>
+        </nav>
+        <!-- Conexão Direta com a tela de login.html -->
+        <a href="login.html" class="btn-header">Área do Atleta</a>
+    </header>
+
+    <!-- Seção Principal (Hero Area) -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">A Elite do Treinamento</span>
+            <h1>Supere Seus <span>Limites Extremos</span></h1>
+            <p>Unimos tecnologia esportiva de ponta e infraestrutura de alta voltagem para atletas focados. Descubra ferramentas e ecossistemas criados exclusivamente para esmagar metas.</p>
+            <div class="cta-group">
+                <a href="#planos" class="btn-primary">Entrar na Arena</a>
+                <!-- Conexão com about.html -->
+                <a href="about.html" class="btn-secondary">Conhecer Manifesto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos em Destaque (Conexão com catalog.html) -->
+    <section class="featured-products">
+        <div class="section-header">
+            <h2 class="section-title">Equipamentos <span>Em Destaque</span></h2>
+            <a href="catalog.html" class="view-all-link">Ver catálogo completo &rarr;</a>
+        </div>
+
+        <div class="grid-showcase">
+            <!-- Produto Espelhado do catálogo com a imagem fornecida -->
+            <div class="product-show-card">
+                <div class="img-wrapper">
+                    <img src="image_0hqr0L.png" alt="Nike Air Max Plus Black">
+                </div>
+                <div class="info-wrapper">
+                    <h5>Nike</h5>
+                    <h4>Nike Air Max Plus Tn All Black</h4>
+                    <div class="price-row">
+                        <span class="price-value">R$ 1.199,90</span>
+                        <a href="catalog.html" class="view-all-link">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto Informativo Adicional -->
+            <div class="product-show-card">
+                <div class="img-wrapper">
+                    <img src="https://unsplash.com" alt="Stability Cross Training">
+                </div>
+                <div class="info-wrapper">
+                    <h5>SportX Pro</h5>
+                    <h4>Tênis Stability Cross Training</h4>
+                    <div class="price-row">
+                        <span class="price-value">R$ 649,90</span>
+                        <a href="catalog.html" class="view-all-link">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Planos de Alta Performance (Conexão com checkout.html) -->
+    <section class="plans-section" id="planos">
+        <div class="section-header" style="justify-content: center; margin-bottom: 60px;">
+            <h2 class="section-title" style="text-align: center;">Escolha Sua <span>Jornada</span></h2>
+        </div>
+
+        <div class="plans-grid">
+            <!-- Plano Padrão -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Plano Club</h3>
+                    <div class="plan-price">R$ 89,90<span>/mês</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Acesso livre à arena SportX</li>
+                    <li>Grade completa de aulas e treinos</li>
+                    <li>Acesso aos vestiários de recuperação</li>
+                </ul>
+                <!-- Conecta com a página de checkout.html diretamente -->
+                <a href="checkout.html" class="btn-plan">Selecionar Plano</a>
+            </div>
+
+            <!-- Plano Black (Destaque que bate com o checkout.html enviado!) -->
+            <div class="plan-card premium">
+                <div class="plan-header">
+                    <h3>Black Evolution</h3>
+                    <div class="plan-price">R$ 149,90<span>/mês</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Acesso total e irrestrito à arena</li>
+                    <li>Personal Trainer focado incluso</li>
+                    <li>Plano nutricional customizado</li>
+                    <li>15% OFF em todo o catálogo de equipamentos</li>
+                </ul>
+                <!-- Conecta com a página de checkout.html diretamente -->
+                <a href="checkout.html" class="btn-plan">Ativar Matrícula</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Sincronizado -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">SPORT<span>X</span></div>
+            <p style="color: var(--texto-cinza); font-size: 14px;">Alta performance gera resultados de elite.</p>
+        </div>
+        <p class="footer-copy">&copy; 2026 SportX - Todos os direitos reservados à Arena de Performance.</p>
+    </footer>
+
+</body>
+</html>
+

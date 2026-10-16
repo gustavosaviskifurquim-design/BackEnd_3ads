@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportX - Login do Atleta</title>
+    <!-- Conexão com o arquivo CSS separado -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Botão Voltar -->
+        <a href="index.html" class="btn-back">← Voltar</a>
+
+        <!-- Logo e Boas-vindas -->
+        <div class="login-header">
+            <div class="logo">SPORT<span>X</span></div>
+            <p>Insira suas credenciais para treinar</p>
+        </div>
+
+        <!-- Formulário de Login -->
+        <form>
+            <div class="form-group">
+                <label for="email">E-mail ou Usuário</label>
+                <input type="email" id="email" placeholder="exemplo@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha de Acesso</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <!-- Opções adicionais -->
+            <div class="form-actions">
+                <label class="remember-me">
+                    <input type="checkbox"> Lembrar de mim
+                </label>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            </div>
+
+            <!-- Botão de Ação -->
+            <button type="submit" class="btn-login">Entrar na Arena</button>
+        </form>
+
+        <!-- Cadastro rápido -->
+        <div class="login-footer">
+            Não tem uma conta? <a href="#">Cadastre-se</a>
+        </div>
+    </div>
+
+</body>
+</html>

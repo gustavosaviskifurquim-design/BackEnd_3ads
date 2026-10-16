@@ -1,0 +1,169 @@
+/* Importando a fonte Poppins corretamente do Google Fonts */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Padronização da Paleta de Cores SportX */
+:root {
+    --bg-principal: #0B0C10;     /* Preto Carbono */
+    --bg-secundario: #1F2833;    /* Grafite Escuro */
+    --verde-neon: #00FF66;       /* Verde Destaque Principal */
+    --verde-hover: #00CC52;      /* Verde Tom Escuro para Hover */
+    --texto-claro: #FFFFFF;      /* Branco Puro */
+    --texto-cinza: #C5C6C7;      /* Cinza de apoio */
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-claro);
+    padding-top: 80px;
+}
+
+/* Seção Sobre / Manifesto */
+.about-section {
+    padding: 100px 8%;
+    background: linear-gradient(180px, var(--bg-principal) 0%, rgba(31, 40, 51, 0.4) 100%);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Coluna da Esquerda: O Manifesto Visual */
+.about-visual {
+    background-color: var(--bg-secundario);
+    padding: 50px 40px;
+    border-radius: 8px;
+    border-left: 6px solid var(--verde-neon);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalhe de textura geométrica ao fundo para parecer tecnológico */
+.about-visual::before {
+    content: "VOLTAGE";
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    font-size: 80px;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(0, 255, 102, 0.03);
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+.about-visual h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--verde-neon);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-visual h2 {
+    font-size: 42px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.about-visual h2 span {
+    color: var(--verde-neon);
+    text-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+}
+
+.about-visual-text {
+    color: var(--texto-cinza); 
+    font-size: 14px; 
+    line-height: 1.6; 
+    margin-bottom: 30px;
+}
+
+.manifesto-badge {
+    display: inline-block;
+    background-color: rgba(0, 255, 102, 0.1);
+    border: 1px solid var(--verde-neon);
+    color: var(--verde-neon);
+    padding: 6px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+/* Coluna da Direita: O Texto Narrativo */
+.about-text h4 {
+    font-size: 18px;
+    color: var(--verde-neon);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    color: var(--texto-cinza);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text p strong {
+    color: var(--texto-claro);
+}
+
+/* Estatísticas rápidas de impacto na base */
+.about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(197, 198, 199, 0.1);
+    padding-top: 30px;
+}
+
+.stat-item h3 {
+    font-size: 28px;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--verde-neon);
+}
+
+.stat-item p {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--texto-cinza);
+    font-weight: 700;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
